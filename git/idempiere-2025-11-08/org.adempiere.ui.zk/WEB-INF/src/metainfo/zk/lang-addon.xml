@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- lang.xml
+	Purpose:
+
+	Description:
+
+	History:
+		Saturday Mar 10 23:43:11     2007, Created by Ashley G Ramdass
+
+Copyright (C) 2007 Ashley G Ramdass (ADempiere WebUI).
+-->
+
+<language>
+
+	<addon-name>iDempiere</addon-name>
+
+	<language-name>xul/html</language-name>
+
+	<version>
+		<version-class>org.adempiere.webui.AdempiereWebUI</version-class>
+		<version-uid>1.0.0</version-uid>
+	</version>
+	
+	<component>
+		<component-name>keylistener</component-name>
+		<component-class>org.zkforge.keylistener.Keylistener</component-class>
+		<widget-class>zkforge.keylistener.KeyListener</widget-class>
+		<mold>
+			<mold-name>default</mold-name>
+			<mold-uri>mold/key-listener.js</mold-uri>
+		</mold>
+	</component>
+
+	<component>
+		<component-name>chosenbox</component-name>
+		<component-class>org.zkoss.addon.chosenbox.Chosenbox</component-class>
+		<widget-class>chosenbox.Chosenbox</widget-class>
+		<mold>
+			<mold-name>default</mold-name>
+			<mold-uri>mold/chosenbox.js</mold-uri>
+			<css-uri>css/chosenbox.css.dsp</css-uri>
+		</mold>
+	</component>
+
+	<javascript-module name="org.idempiere.websocket" version="202507310500"/>	
+	<javascript-module name="jawwa.atmosphere" version="202205100600"/>
+	<javascript-module name="adempiere.local.storage" version="202205100600"/>
+	<javascript-module name="html2canvaspro" version="1.5.8"/>
+	<javascript-module name="org.idempiere.commons" version="202411232036"/>
+	<javascript-module name="jquery.maskedinput" version="1.4.1" />
+	<javascript-module name="photobooth"	version="0.7-rsd3" />
+	<javascript-module name="chosenbox" version="202205100600"/>
+	<javascript-module name="zkforge.keylistener" version="202012120100"/>
+	<javascript-module name="pdf.js" version="4.0.379"/>	
+</language>

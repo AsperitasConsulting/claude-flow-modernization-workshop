@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.adempiere.base.feature"
+      label="iDempiere Core"
+      version="13.0.0.qualifier"
+      provider-name="iDempiere Community">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <includes
+         id="org.compiere.db.provider.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.adempiere.payment.processor.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.adempiere.pipo.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.adempiere.replication.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.adempiere.report.jasper.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.idempiere.webservices.client.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.idempiere.bouncy.castle.feature"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.adempiere.base"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.adempiere.base.callout"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.adempiere.base.process"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.adempiere.ui"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.ecs"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.ant"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.junit"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.servicemix.bundles.cglib"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.commons.collections"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.commons.logging"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.xml.resolver"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.servicemix.bundles.xerces"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.xml.serializer"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.mortbay.jasper.apache-el"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.adempiere.install"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.hamcrest.core"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.passay"
+         version="0.0.0"/>
+
+   <plugin
+         id="net.sf.supercsv.super-csv"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.commons.lang"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.ibm.icu"
+         version="0.0.0"/>
+
+   <plugin
+         id="joda-time"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.commons.commons-collections4"
+         version="0.0.0"/>
+
+   <plugin
+         id="wrapped.xalan.xalan"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.commons.lang3"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.geronimo.specs.geronimo-j2ee-management_1.1_spec"
+         version="0.0.0"/>
+
+   <plugin
+         id="jakarta.annotation-api"
+         version="0.0.0"/>
+
+   <plugin
+         id="groovy"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.commons.commons-configuration2"
+         version="0.0.0"/>
+
+   <plugin
+         id="groovy-console"
+         version="0.0.0"/>
+
+   <plugin
+         id="groovy-datetime"
+         version="0.0.0"/>
+
+   <plugin
+         id="groovy-json"
+         version="0.0.0"/>
+
+   <plugin
+         id="groovy-jsr223"
+         version="0.0.0"/>
+
+   <plugin
+         id="groovy-nio"
+         version="0.0.0"/>
+
+   <plugin
+         id="groovy-xml"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.sun.activation.jakarta.activation"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.sun.mail.gimap"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.sun.mail.jakarta.mail"
+         version="0.0.0"/>
+
+   <plugin
+         id="jakarta.xml.bind-api"
+         version="0.0.0"/>
+
+   <plugin
+         id="groovy-sql"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.github.librepdf.openpdf"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.github.librepdf.openpdf-fonts-extra"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.glassfish.hk2.external.jakarta.inject"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.geronimo.specs.geronimo-jms_1.1_spec"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.activemq.activemq-client"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.commons.commons-beanutils"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.commons.commons-codec"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.commons.commons-compress"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.commons.commons-io"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.commons.commons-net"
+         version="0.0.0"/>
+
+   <plugin
+         id="wrapped.org.apache.activemq.activemq-jaas"
+         version="0.0.0"/>
+
+   <plugin
+         id="wrapped.org.apache.activemq.activemq-kahadb-store"
+         version="0.0.0"/>
+
+   <plugin
+         id="wrapped.org.apache.activemq.activemq-openwire-legacy"
+         version="0.0.0"/>
+
+   <plugin
+         id="wrapped.org.apache.activemq.protobuf.activemq-protobuf"
+         version="0.0.0"/>
+
+   <plugin
+         id="wrapped.org.apache.poi.poi"
+         version="0.0.0"/>
+
+   <plugin
+         id="wrapped.org.apache.poi.poi-ooxml"
+         version="0.0.0"/>
+
+   <plugin
+         id="wrapped.org.apache.poi.poi-ooxml-lite"
+         version="0.0.0"/>
+
+   <plugin
+         id="xstream"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.fusesource.hawtbuf.hawtbuf"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.commons.commons-text"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.logging.log4j.api"
+         version="0.0.0"/>
+
+   <plugin
+         id="wrapped.org.apache.xmlbeans.xmlbeans"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.logging.log4j.to.slf4j"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.github.ben-manes.caffeine"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.google.gson"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.google.guava"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.google.guava.failureaccess"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.google.http-client.google-http-client"
+         version="0.0.0"/>
+
+   <plugin
+         id="wrapped.io.opencensus.opencensus-api"
+         version="0.0.0"/>
+
+   <plugin
+         id="wrapped.io.opencensus.opencensus-contrib-http-util"
+         version="0.0.0"/>
+
+   <plugin
+         id="wrapped.io.grpc.grpc-context"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.httpcomponents.httpcore"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.httpcomponents.httpclient"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.osgi.service.cm"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.osgi.service.event"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.google.zxing.core"
+         version="0.0.0"/>
+
+   <plugin
+         id="io.github.classgraph.classgraph"
+         version="0.0.0"/>
+
+   <plugin
+         id="wrapped.net.sourceforge.barbecue.barbecue"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.antlr.antlr4-runtime"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.codehaus.jettison.jettison"
+         version="0.0.0"/>
+
+   <plugin
+         id="wrapped.org.dom4j.dom4j"
+         version="0.0.0"/>
+
+   <plugin
+         id="javax.xml"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.osgi"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.diffplug.osgi.extension.sun.misc"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.objectweb.asm"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.tukaani.xz"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.felix.scr"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.osgi.service.component"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.osgi.service.metatype"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.osgi.util.promise"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.osgi.util.function"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.core.runtime"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.equinox.app"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.equinox.common"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.equinox.registry"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.osgi.compatibility.state"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.krysalis.barcode4j"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.osgi.service.component.annotations"
+         version="0.0.0"/>
+
+   <plugin
+         id="wrapped.com.google.http-client.google-http-client-gson"
+         version="0.0.0"/>
+
+   <plugin
+         id="wrapped.com.google.zxing.javase"
+         version="0.0.0"/>
+
+   <plugin
+         id="wrapped.dev.samstevens.totp.totp"
+         version="0.0.0"/>
+
+   <plugin
+         id="wrapped.org.jfree.jcommon"
+         version="0.0.0"/>
+
+   <plugin
+         id="wrapped.org.jfree.jfreechart"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.core.contenttype"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.core.jobs"
+         version="0.0.0"/>
+
+   <plugin
+         id="wrapped.com.zaxxer.SparseBitSet"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.servicemix.bundles.batik"
+         version="0.0.0"/>
+
+   <plugin
+         id="wrapped.org.apache.xmlgraphics.xmlgraphics-commons"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.w3c.css.sac"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.w3c.dom.smil"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.w3c.dom.svg"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.w3c.dom.events"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.pdfbox"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.pdfbox.fontbox"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.commons.math3"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.util"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.servlet-api"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.servlet-api.capability"
+         version="0.0.0"/>
+
+   <plugin
+         id="slf4j.api"
+         version="0.0.0"/>
+
+   <plugin
+         id="slf4j.jdk14"
+         version="0.0.0"/>
+
+</feature>

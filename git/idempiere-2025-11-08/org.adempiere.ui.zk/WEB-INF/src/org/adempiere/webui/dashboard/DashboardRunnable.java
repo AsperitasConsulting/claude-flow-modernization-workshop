@@ -1,0 +1,188 @@
+/******************************************************************************
+ * Copyright (C) 2008 Low Heng Sin                                            *
+ * Copyright (C) 2008 Idalica Corporation                                     *
+ * This program is free software; you can redistribute it and/or modify it    *
+ * under the terms version 2 of the GNU General Public License as published   *
+ * by the Free Software Foundation. This program is distributed in the hope   *
+ * that it will be useful, but WITHOUT ANY WARRANTY; without even the implied *
+ * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.           *
+ * See the GNU General Public License for more details.                       *
+ * You should have received a copy of the GNU General Public License along    *
+ * with this program; if not, write to the Free Software Foundation, Inc.,    *
+ * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.                     *
+ *****************************************************************************/
+package org.adempiere.webui.dashboard;
+
+import java.io.Serializable;
+import java.lang.ref.WeakReference;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Properties;
+
+import org.adempiere.util.ServerContext;
+import org.adempiere.webui.apps.BusyDialog;
+import org.adempiere.webui.session.SessionContextListener;
+import org.adempiere.webui.util.ServerPushTemplate;
+import org.adempiere.webui.util.ZkContextRunnable;
+import org.compiere.Adempiere;
+import org.compiere.util.CLogger;
+import org.zkoss.util.Locales;
+import org.zkoss.zk.ui.Desktop;
+import org.zkoss.zk.ui.event.Events;
+import org.zkoss.zk.ui.util.DesktopCleanup;
+
+/**
+ * Runnable with weak reference to {@link Desktop} and a list of {@link DashboardPanel}.
+ * @author hengsin
+ * @author Cristina Ghita, www.arhipac.ro BF [2871741] Error at start
+ * @see https://sourceforge.net/p/adempiere/zk-web-client/327/
+ */
+public class DashboardRunnable implements Runnable, Serializable
+{
+	/**
+	 * generated serial id
+	 */
+	private static final long serialVersionUID = 5995227773511788894L;
+
+	private WeakReference<Desktop> desktop;
+	private List<DashboardPanel> dashboardPanels;
+	private Locale locale;
+
+	/** Desktop cleanup listener to call {@link #cleanup()} */
+	private DesktopCleanup listener;
+
+	@SuppressWarnings("unused")
+	private static final CLogger logger = CLogger.getCLogger(DashboardRunnable.class);
+
+	/**
+	 * @param desktop zk Desktop instance
+	 */
+	public DashboardRunnable(Desktop desktop) {
+		this.desktop = new WeakReference<Desktop>(desktop);
+
+		dashboardPanels = new ArrayList<DashboardPanel>();
+		locale = Locales.getCurrent();
+		
+		listener = new DesktopCleanup() {			
+			@Override
+			public void cleanup(Desktop desktop) throws Exception {
+				DashboardRunnable.this.cleanup();
+			}
+		};
+		this.desktop.get().addListener(listener);
+	}
+
+	/**
+	 * Perform clean up
+	 */
+	protected void cleanup() {
+		dashboardPanels = null;
+		if (desktop != null && desktop.get() != null)
+			desktop.get().removeListener(listener);
+		desktop = null;
+	}
+
+	/**
+	 * Copy {@link #dashboardPanels} from tmp.
+	 * @param tmp DashboardRunnable
+	 * @param desktop
+	 */
+	public DashboardRunnable(DashboardRunnable tmp, Desktop desktop) {
+		this(desktop);
+		this.dashboardPanels = tmp.dashboardPanels;
+		tmp.cleanup();
+	}
+
+	/**
+	 * Refresh {@link #dashboardPanels} (usually call by background polling thread).<br/>
+	 * Delegate to {@link #refreshDashboard(boolean)}.
+	 */
+	@Override
+	public void run()
+	{
+		if (dashboardPanels != null && desktop != null && desktop.get() != null
+				&& desktop.get().isAlive() && desktop.get().isServerPushEnabled())
+		{
+			Locales.setThreadLocal(locale);
+			try {
+				refreshDashboard(true);
+			} catch (Exception e) {
+				throw new RuntimeException(e);
+			}
+		}
+	}
+
+	/**
+	 * Refresh {@link #dashboardPanels}
+	 * @param polling true if calling from polling thread
+	 */
+	public void refreshDashboard(boolean polling)
+	{
+		ServerPushTemplate template = new ServerPushTemplate(desktop.get());
+		//set thread local context if not in event thread
+		Properties ctx = null;
+		boolean isEventThread = Events.inEventListener();
+		if (!isEventThread)
+		{
+			try {
+				ctx = (Properties)template.getDesktop().getSession().getAttribute(SessionContextListener.SESSION_CTX);
+			} catch (Exception e) {
+				ctx = null;
+			}
+			if (ctx == null)
+				return;
+		}
+		try
+		{
+			if (!isEventThread)
+			{
+				ServerContext.setCurrentInstance(ctx);
+			}
+			
+	    	for(int i = 0; i < dashboardPanels.size(); i++)
+	    	{
+	    		if (polling && !dashboardPanels.get(i).isPooling())
+	    			continue;
+	    		
+	    		final DashboardPanel dpanel = dashboardPanels.get(i); 
+	    		BusyDialog busyDialog = new BusyDialog();
+                busyDialog.setShadow(false);                
+                dpanel.getParent().insertBefore(busyDialog, dpanel.getParent().getFirstChild());
+	    		ZkContextRunnable cr = new ZkContextRunnable() {
+	    			@Override
+					protected void doRun() {
+	    				dpanel.refresh(template);
+	    				template.executeAsync(() -> {
+	    					busyDialog.detach();
+	    				});
+	    			}
+	    		};
+	    		Adempiere.getThreadPoolExecutor().submit(cr);
+	    	}
+		}
+		finally
+		{
+			if (!isEventThread)
+			{
+				ServerContext.dispose();
+			}
+		}
+	}
+
+	/**
+	 * Add DashboardPanel to the auto refresh list
+	 * @param dashboardPanel
+	 */
+	public void add(DashboardPanel dashboardPanel) {
+		if (dashboardPanels != null)
+			dashboardPanels.add(dashboardPanel);
+	}
+	
+	/**
+	 * @return boolean
+	 */
+	public boolean isEmpty() {
+		return dashboardPanels == null || dashboardPanels.isEmpty() ? true : false;
+	}
+}
