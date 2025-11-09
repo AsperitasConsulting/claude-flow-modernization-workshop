@@ -9,13 +9,7 @@
     "ghcr.io/devcontainers/features/python:1": {
       "version": "3.11"
     },
-    "ghcr.io/devcontainers/features/git:1": {},
-    "ghcr.io/devcontainers/features/azure-cli:1": {
-      "version": "latest"
-    },
-    "ghcr.io/devcontainers/features/aws-cli:1": {
-      "version": "latest"
-    }
+    "ghcr.io/devcontainers/features/git:1": {}
   },
 
   "postCreateCommand": "bash .devcontainer/setup.sh",
@@ -23,13 +17,6 @@
 
   "remoteEnv": {
     "ANTHROPIC_API_KEY": "${localEnv:ANTHROPIC_API_KEY}",
-    "AZURE_SUBSCRIPTION_ID": "${localEnv:AZURE_SUBSCRIPTION_ID}",
-    "AZURE_TENANT_ID": "${localEnv:AZURE_TENANT_ID}",
-    "AZURE_CLIENT_ID": "${localEnv:AZURE_CLIENT_ID}",
-    "AZURE_CLIENT_SECRET": "${localEnv:AZURE_CLIENT_SECRET}",
-    "AWS_ACCESS_KEY_ID": "${localEnv:AWS_ACCESS_KEY_ID}",
-    "AWS_SECRET_ACCESS_KEY": "${localEnv:AWS_SECRET_ACCESS_KEY}",
-    "AWS_DEFAULT_REGION": "${localEnv:AWS_DEFAULT_REGION}",
     "PATH": "${containerEnv:PATH}:/usr/local/share/npm-global/bin:${containerEnv:HOME}/.npm-global/bin"
   },
 
@@ -37,8 +24,6 @@
     "vscode": {
       "extensions": [
         "ms-python.python",
-        "ms-azuretools.vscode-azurecli",
-        "amazonwebservices.aws-toolkit-vscode",
         "GitHub.copilot"
       ],
       "settings": {
