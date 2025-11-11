@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.idempiere.zk.feature"
+      label="Zk Library"
+      version="13.0.0.qualifier"
+      provider-name="iDempiere Community">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <plugin
+         id="zcommon"
+         version="0.0.0"/>
+
+   <plugin
+         id="zel"
+         version="0.0.0"/>
+
+   <plugin
+         id="zhtml"
+         version="0.0.0"/>
+
+   <plugin
+         id="zk"
+         version="0.0.0"/>
+
+   <plugin
+         id="zkbind"
+         version="0.0.0"/>
+
+   <plugin
+         id="zkplus"
+         version="0.0.0"/>
+
+   <plugin
+         id="zul"
+         version="0.0.0"/>
+
+   <plugin
+         id="zweb"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.idempiere.zk.extra"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.commons.commons-fileupload"
+         version="0.0.0"/>
+
+   <plugin
+         id="zkwebfragment"
+         version="0.0.0"/>
+
+   <plugin
+         id="zweb-dsp"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.zkoss.zsoup"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.commons.commons-fileupload2-core"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.commons.commons-fileupload2-javax"
+         version="0.0.0"/>
+
+</feature>

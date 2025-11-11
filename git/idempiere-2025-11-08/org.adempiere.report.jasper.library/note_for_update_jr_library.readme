@@ -1,0 +1,10 @@
+Guide for update:
+1. Download release file from https://github.com/TIBCOSoftware/jasperreports/releases (jasperreports-x.x.x-project.zip)
+
+2. Extract it and get the version of dependencies from ivy.xml.
+
+3. Update pom.xml with updated version of dependencies (if any has change)
+
+4. We get some dependencies from jasper studio's p2 repository (https://sourceforge.net/projects/jasperstudio/files/updatesite/${version}, 
+   maintained at org.idempiere.p2.targetplatform/org.idempiere.p2.targetplatform.tpd). If we moved to a new version of JasperReport,
+   We need to update the repository version at org.idempiere.p2.targetplatform.tpd and re-create org.idempiere.p2.targetplatform.target 

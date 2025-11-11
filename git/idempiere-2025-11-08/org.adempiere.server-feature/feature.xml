@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.adempiere.server.feature"
+      label="iDempiere Server"
+      version="13.0.0.qualifier"
+      provider-name="iDempiere Community">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <includes
+         id="org.adempiere.replication.server.feature"
+         version="0.0.0"
+         optional="true"/>
+
+   <includes
+         id="org.adempiere.ui.zk.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.idempiere.felix.webconsole.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.adempiere.report.jasper.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.adempiere.pipo.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.idempiere.hazelcast.service.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.adempiere.base.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.idempiere.zk.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.idempiere.webservices.feature"
+         version="0.0.0"/>
+
+   <plugin
+         id="javax.websocket-api"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.adempiere.server"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.adempiere.eclipse.equinox.http.servlet"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.objectweb.asm.commons"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.objectweb.asm.tree"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.mortbay.jasper.apache-jsp"
+         version="0.0.0"/>
+
+   <plugin
+         id="json"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.client"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.deploy"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.http"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.io"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.jmx"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.jndi"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.plus"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.security"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.server"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.util.ajax"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.xml"
+         version="0.0.0"/>
+
+   <plugin
+         id="jakarta.persistence-api"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.objectweb.asm.util"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.objectweb.asm.tree.analysis"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.google.oauth-client"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.glassfish.hk2.external.aopalliance-repackaged"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.websocket.core.client"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.alpn.client"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.rewrite"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.websocket.core.common"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.websocket.core.server"
+         version="0.0.0"/>
+
+   <plugin
+         id="jakarta.transaction-api"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.idempiere.jetty.osgi.boot.fragment"
+         version="0.0.0"/>
+
+   <plugin
+         id="jakarta.validation.jakarta.validation-api"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.idempiere.ui.sso.oidc"
+         version="0.0.0"/>
+
+   <plugin
+         id="javax.servlet.jsp.jstl-api"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.ee8.glassfish.jstl"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.glassfish.web.javax.servlet.jsp.jstl"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.ee8.annotations"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.ee8.apache-jsp"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.ee8.security.jaspi"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.ee8.osgi.boot"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.ee8.osgi.boot.jsp"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.osgi"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.ee8.servlet"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.ee8.servlets"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.ee8.webapp"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.ee8.websocket.api"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.ee8.websocket.common"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.ee8.websocket.javax.client"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.ee8.websocket.javax.common"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.ee8.websocket.javax.server"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.ee8.websocket.server"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.ee8.websocket.servlet"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.ee8.jndi"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.ee8.plus"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.ee"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.ee8.proxy"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.http.spi"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.ee8.server"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.ee8.security"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.http2.common"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.http2.hpack"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.http2.server"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.http3.common"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.http3.qpack"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.http3.server"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.keystore"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.proxy"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.quic.common"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.quic.quic-quiche-common"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.quic.quic-quiche-jna"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.quic.server"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.session"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.jetty.websocket-api"
+         version="0.0.0"/>
+
+   <plugin
+         id="slf4j.api"
+         version="0.0.0"/>
+
+   <plugin
+         id="slf4j.jdk14"
+         version="0.0.0"/>
+
+   <plugin
+         id="javax.interceptor-api"
+         version="0.0.0"/>
+
+   <plugin
+         id="javax.enterprise.cdi-api"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.sun.jna"
+         version="0.0.0"/>
+
+   <plugin
+         id="javax.security.auth.message-api"
+         version="0.0.0"/>
+
+</feature>

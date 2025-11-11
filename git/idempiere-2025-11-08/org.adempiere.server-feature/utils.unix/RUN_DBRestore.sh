@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# $Id: RUN_DBRestore.sh,v 1.9 2005/01/22 21:59:15 jjanke Exp $
+if [ "$IDEMPIERE_HOME" ]; then
+    cd "$IDEMPIERE_HOME"/utils || (echo "Cannot cd $IDEMPIERE_HOME/utils"; exit 1)
+fi
+export ID_ENV=Server
+. ./myEnvironment.sh
+echo Restore idempiere Database from Export- "$IDEMPIERE_HOME" \("$ADEMPIERE_DB_NAME"\)
+
+
+echo Re-Create idempiere User and import "$IDEMPIERE_HOME"/data/ExpDat.dmp
+echo "== The import will show warnings. This is OK =="
+ls -lsa "$IDEMPIERE_HOME"/data/ExpDat.dmp
+echo Press enter to continue ...
+read -r _
+
+# Parameter: <adempiereID> <adempierePwd> <systemUser> <systemPwd>
+if [ -z "$ADEMPIERE_DB_SYSTEM_USER" ]; then
+    if [ "$ADEMPIERE_DB_PATH" = "postgresql" ]; then
+        ADEMPIERE_DB_SYSTEM_USER=postgres
+    else
+        ADEMPIERE_DB_SYSTEM_USER=SYSTEM
+    fi
+fi
+"$ADEMPIERE_DB_PATH"/DBRestore.sh "$ADEMPIERE_DB_USER" "$ADEMPIERE_DB_PASSWORD" "$ADEMPIERE_DB_SYSTEM_USER" "$ADEMPIERE_DB_SYSTEM"

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.adempiere.ui.zk.feature"
+      label="iDempiere Web Client"
+      version="13.0.0.qualifier"
+      provider-name="iDempiere Community">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <plugin
+         id="org.adempiere.ui.zk"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.atmosphere.runtime"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.idempiere.keikai"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.idempiere.printformat.editor"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.idempiere.zk.billboard"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.idempiere.zk.billboard.chart"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.idempiere.zk.breeze.theme"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.idempiere.zk.iceblue_c.theme"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.idempiere.zk.datatable"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.idempiere.zk.pivot"
+         version="0.0.0"/>
+
+   <plugin
+         id="javax.websocket-api.fragment"
+         version="0.0.0"/>
+
+</feature>

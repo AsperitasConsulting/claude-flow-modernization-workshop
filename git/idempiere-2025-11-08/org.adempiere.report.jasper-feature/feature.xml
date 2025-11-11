@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.adempiere.report.jasper.feature"
+      label="iDempiere Jasper Report Integration"
+      version="13.0.0.qualifier"
+      provider-name="iDempiere Community">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <plugin
+         id="org.adempiere.report.jasper"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.adempiere.report.jasper.library"
+         version="0.0.0"/>
+
+   <plugin
+         id="bcmail"
+         version="0.0.0"/>
+
+   <plugin
+         id="jaxen"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.servicemix.bundles.rhino"
+         version="0.0.0"/>
+
+   <plugin
+         id="net.sf.jasperreports.engine"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.fasterxml.jackson.core.jackson-annotations"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.fasterxml.jackson.core.jackson-core"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.fasterxml.jackson.core.jackson-databind"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.fasterxml.jackson.dataformat.jackson-dataformat-xml"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.fasterxml.jackson.datatype.jackson-datatype-guava"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.fasterxml.jackson.datatype.jackson-datatype-joda"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.fasterxml.jackson.jaxrs.jackson-jaxrs-base"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.fasterxml.jackson.jaxrs.jackson-jaxrs-json-provider"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.fasterxml.jackson.jaxrs.jackson-jaxrs-xml-provider"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.fasterxml.jackson.module.jackson-module-jaxb-annotations"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.fasterxml.jackson.module.jackson-module-jsonSchema"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.fasterxml.woodstox.woodstox-core"
+         version="0.0.0"/>
+
+   <plugin
+         id="javax.validation.api"
+         version="0.0.0"/>
+
+   <plugin
+         id="jakarta.ws.rs-api"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.fasterxml.jackson.datatype.jackson-datatype-json-org"
+         version="0.0.0"/>
+
+   <plugin
+         id="json"
+         version="0.0.0"/>
+
+   <plugin
+         id="stax2-api"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.sun.xml.bind.external.relaxng-datatype"
+         version="0.0.0"/>
+
+   <plugin
+         id="wrapped.org.apache.lucene.lucene-analyzers-common"
+         version="0.0.0"/>
+
+   <plugin
+         id="wrapped.org.apache.lucene.lucene-core"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.commons.digester"
+         version="0.0.0"/>
+
+</feature>
