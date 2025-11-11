@@ -1,9 +1,15 @@
 # Application Modernization Workshop using Claude-Flow
 
+## Prerequisites
+The following materials will be needed for you to participate in the workshop. If you do not have these materials, you're welcome to watch as a demo.
+
+* A GitHub account capable of running GitHub Codespaces
+* A Claude account capable of running Claude Code at the Pro or Max levels
+
 ## Installation steps
 
 > Step 1: Fork this repository
-Fork this GitHub repository so that you can best run it as a codespace in your own account.
+Fork this [GitHub repository](https://github.com/AsperitasConsulting/claude-flow-modernization-workshop) so that you can best run it as a codespace in your own account.
 
 ![Repository fork instructions](images/codespace-repo-fork.png)
 
@@ -50,8 +56,66 @@ Claude will ask you to re-confirm the option to skip permissions.  It's in your 
 
 ![Codespace create instructions](images/claude-code-install-4.png)
 
+You'll need to exit the Claude Code UI by using Cntl-C
+
 > Step 5: Configure Claude Code
+
+This next step installs Claude-Flow.  You "may" need to hit the carriage return a couple of times if the display freezes.
+
 ```
-npm install claude-flow@latest --init
-claude-flow --version
+npx claude-flow@alpha init --force
+```
+
+## Workshop Commands
+
+> 12 Factor Analysis instructions
+
+* Perform a twelve-factor analysis on this application in folder git/idempiere-2025-11-08 and put the results in folder 12-factor.
+* Twelve-factor principles are documented at https://www.12factor.net/  
+* I want to know where this application falls short of twelve-factor principles so that I can assess it's ability to capitalize on public cloud dynamic scaling and availability features should it be deployed there. 
+* Do not change the application yet. 
+* I'm only interested in the twelve-factor analysis. 
+* Please let me know if you need additional information.
+
+```
+npx claude-flow@alpha swarm "Perform a twelve-factor analysis on this application in folder git/idempiere-2025-11-08 and put the results in folder 12-factor. Twelve-factor principles are documented at https://www.12factor.net/  I want to know where this application falls short of twelve-factor principles so that I can assess it's ability to capitalize on public cloud dynamic scaling and availability features should it be deployed there. Do not change the application yet. I'm only interested in the twelve-factor analysis. Please let me know if you need additional information." --claude
+```
+
+
+> 12 Factor Analysis implementation plan
+
+* Use the twelve-factor analysis you documented in folder 12-factor as input. 
+* Twelve-factor principles are documented at https://www.12factor.net/  
+* Document an implementation plan to upgrade the application in folder git/idempiere-2025-11-08 to adhere to 12-factor principles. 
+* Place the implementation plan in folder 12-factor-plans. 
+* Assume the implementation will be performed by agentic engineers using Claude-Flow and Claude Code.  
+* Do not change the application yet. Please let me know if you need additional information.
+
+```
+npx claude-flow@alpha swarm "Use the twelve-factor analysis you documented in folder 12-factor as input. Twelve-factor principles are documented at https://www.12factor.net/  Document an implementation plan to upgrade the application in folder git/idempiere-2025-11-08 to adhere to 12-factor principles. Place the implementation plan in folder 12-factor-plans. Assume the implementation will be performed by agentic engineers using Claude-Flow and Claude Code.  Do not change the application yet. Please let me know if you need additional information." --claude
+```
+
+> 12 Factor Analysis implementation plan refinement
+
+* Refine the plan you documented in folder 12-factor-plans. 
+* Please enhance the plan to ensure that an automated test harness exists before we change anything in the application.
+* Source code for the application in folder git/idempiere-2025-11-08.
+* Please reflect human activity by agentic engineers and other humans needed. 
+* Also include any needed human effort and staffing needs. 
+* Please let me know if you need additional information.
+```
+npx claude-flow@alpha swarm "Refine the plan you documented in folder 12-factor-plans. Please enhance the plan to ensure that an automated test harness exists before we change anything in the application. Source code for the application in folder git/idempiere-2025-11-08. Please reflect human activity by agentic engineers and other humans needed. Also include any needed human effort and staffing needs. Please let me know if you need additional information." --claude
+```
+
+> Product Migration analysis instruction
+
+* My intention is to replace an installation of the idempiere product at an enterprise with a SaaS product alternative. 
+* Source code for the application in folder git/idempiere-2025-11-08.
+* Do a market analysis to determine which SaaS products would be the best candidates for migration. 
+* Place the analysis in folder saas-market-analysis. 
+* Product selection will be based on preserving end-user capabilities to the extent possible and an estimate of the migration effort. 
+* Please let me know if you need additional information.
+
+```
+npx claude-flow@alpha swarm "My intention is to replace an installation of the idempiere product at an enterprise with a SaaS product alternative. Source code for the application in folder git/idempiere-2025-11-08. Do a market analysis to determine which SaaS products would be the best candidates for migration. Place the analysis in folder saas-market-analysis. Product selection will be based on preserving end-user capabilities to the extent possible and an estimate of the migration effort. Please let me know if you need additional information." --claude
 ```
